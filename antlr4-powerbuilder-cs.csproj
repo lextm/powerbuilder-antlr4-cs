@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>antlr4_powerbuilder_cs</RootNamespace>
+  </PropertyGroup>
+
+     <ItemGroup>
+     <Antlr4 Include="PowerBuilderLexer.g4">
+       <Generator>MSBuild:Compile</Generator>
+       <Visitor>True</Visitor>
+       <Listener>False</Listener>
+     </Antlr4>
+     <Antlr4 Include="PowerBuilderParser.g4">
+       <Generator>MSBuild:Compile</Generator>
+       <Visitor>True</Visitor>
+       <Listener>False</Listener>
+     </Antlr4>
+   </ItemGroup>
+
+   <ItemGroup>
+     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+     <PackageReference Include="Antlr4" Version="4.6.6" />
+   </ItemGroup>
+
+</Project>
